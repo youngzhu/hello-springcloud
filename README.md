@@ -8,3 +8,4 @@
 实现：查询订单时，将用户的基本信息一起返回
 
 - 利用RestTemplate发起HTTP请求，获取用户信息
+- 搭建Eureka Server
