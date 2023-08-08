@@ -8,4 +8,11 @@
 实现：查询订单时，将用户的基本信息一起返回
 
 - 利用RestTemplate发起HTTP请求，获取用户信息
+
+## v0.2.0
+引入Eureka
+
 - 搭建Eureka Server
+- 注册服务
+  1. 引入eureka-client依赖
+  2. 在 application.yml 配置文件中添加Eureka的服务地址和自己的服务名称
