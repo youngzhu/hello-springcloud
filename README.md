@@ -31,4 +31,13 @@
 - 服务注册与查找
   1. 引入 nacos 依赖包（pom.xml）
   2. 添加 nacos 服务地址（application.yml）
-  
+- Nacos服务分级存储模型
+  1. 一级是服务，例如 userservice
+  2. 二级是集群，例如 HZ 或 SH
+  3. 三级是实例
+- 集群属性
+  - application.yml 中添加 `spring.cloud.nacos.discovery.cluster-name` 属性
+  - 在没有配置负载均衡策略的情况下，即使有集群，还是轮巡调用
+- 负载均衡
+  - NacosRule，优先访问本集群的服务。如果有多个服务，采用*随机*的方式访问
+  - 如果本集群内没有可用的服务，则会访问其他集群的服务
