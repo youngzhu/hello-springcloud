@@ -9,7 +9,7 @@
 
 - 利用RestTemplate发起HTTP请求，获取用户信息
 
-## v0.2.0
+## v0.2.0-eureka
 引入Eureka
 
 - 搭建Eureka Server
@@ -22,3 +22,13 @@
 - 使用服务
   1. 将原来调用服务时的IP+端口换成对应的服务名称
   2. 在RestTemplate上添加 @LoadBalanced 注解
+
+## v0.3.0-nacos
+使用Nacos
+
+不用修改源代码，改配置文件即可，将 Eureka 换成 Nacos
+
+- 服务注册与查找
+  1. 引入 nacos 依赖包（pom.xml）
+  2. 添加 nacos 服务地址（application.yml）
+  
