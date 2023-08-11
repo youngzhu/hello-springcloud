@@ -23,8 +23,8 @@
   1. 将原来调用服务时的IP+端口换成对应的服务名称
   2. 在RestTemplate上添加 @LoadBalanced 注解
 
-## v0.3.0-nacos
-使用Nacos
+## v0.3.0-nacos-service
+使用Nacos —— 服务管理
 
 不用修改源代码，改配置文件即可，将 Eureka 换成 Nacos
 
@@ -39,5 +39,28 @@
   - application.yml 中添加 `spring.cloud.nacos.discovery.cluster-name` 属性
   - 在没有配置负载均衡策略的情况下，即使有集群，还是轮巡调用
 - 负载均衡
-  - NacosRule，优先访问本集群的服务。如果有多个服务，采用*随机*的方式访问
+  - NacosRule，优先访问本集群的服务。如果有多个服务，采用**随机**的方式访问
   - 如果本集群内没有可用的服务，则会访问其他集群的服务
+- 权重设置（通过控制台）
+  - 0-1之间。0 则不提供服务
+- 环境隔离（namespace）
+  - 不同命名空间下的服务互不可见
+
+## v0.3.1-nacos-config
+Nacos配置管理
+
+- 添加配置（控制台操作）
+  - 配置的命名：服务名-环境.yaml，例如 _userservice-dev.yaml_
+- 使用配置
+  1. 引入nacos配置依赖
+    ```xml
+        <!-- nacos配置管理依赖包 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+  ```
+  2. 添加 _bootstrap.yml_ 文件
+     - 加载顺序：bootstrap.yml - nacos配置 - application.yml
+
