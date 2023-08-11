@@ -42,4 +42,9 @@ public class UserController {
 //        return "现在时间：" + LocalDateTime.now().format(DateTimeFormatter.ofPattern(dateformat));
         return "当前时间：" + LocalDateTime.now().format(DateTimeFormatter.ofPattern(properties.getDateformat()));
     }
+
+    @GetMapping("prop")
+    public PatternProperties properties() {
+        return properties;
+    }
 }

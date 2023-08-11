@@ -67,4 +67,4 @@ Nacos配置管理
   - 方式一：@Value + @RefreshScope，在 Controller 类上添加 @RefreshScope 注解
   - 方式二：@ConfigurationProperties 对象
 - 多环境配置共享
-- 
+  - 多配置的优先级（覆盖）：servicename-profile.yaml > servicename.yaml > application.yaml
