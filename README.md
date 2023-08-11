@@ -63,4 +63,8 @@ Nacos配置管理
   ```
   2. 添加 _bootstrap.yml_ 文件
      - 加载顺序：bootstrap.yml - nacos配置 - application.yml
-
+- 配置的热更新（自动刷新）
+  - 方式一：@Value + @RefreshScope，在 Controller 类上添加 @RefreshScope 注解
+  - 方式二：@ConfigurationProperties 对象
+- 多环境配置共享
+- 
