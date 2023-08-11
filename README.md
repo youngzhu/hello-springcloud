@@ -68,3 +68,12 @@ Nacos配置管理
   - 方式二：@ConfigurationProperties 对象
 - 多环境配置共享
   - 多配置的优先级（覆盖）：servicename-profile.yaml > servicename.yaml > application.yaml
+
+## v0.3.2-nacos-cluster
+集群搭建
+
+步骤（详见 [Nacos安装指南.md](./Nacos安装指南.md)）：
+1. MySQL初始化配置表
+2. 修改nacos配置文件：节点信息、数据库配置
+3. 启动多个nacos服务
+4. Nginx反向代理
