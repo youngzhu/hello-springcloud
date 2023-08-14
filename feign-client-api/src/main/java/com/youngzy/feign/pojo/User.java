@@ -1,4 +1,4 @@
-package com.youngzy.order.pojo;
+package com.youngzy.feign.pojo;
 
 import lombok.Data;
 

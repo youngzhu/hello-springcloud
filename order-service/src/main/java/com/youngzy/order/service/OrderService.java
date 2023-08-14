@@ -1,12 +1,11 @@
 package com.youngzy.order.service;
 
-import com.youngzy.order.client.UserClient;
+import com.youngzy.feign.client.UserClient;
+import com.youngzy.feign.pojo.User;
 import com.youngzy.order.mapper.OrderMapper;
 import com.youngzy.order.pojo.Order;
-import com.youngzy.order.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 public class OrderService {

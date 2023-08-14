@@ -88,3 +88,12 @@ Feign是一个声明式的HTTP客户端，其作用就是帮助我们优雅地�
 1. 引入依赖
 2. 启动类添加 @EnableFeignClients 注解
 3. 编写 FeignClient 接口
+
+## v0.4.1-feign-client-api
+Feign 最佳实践
+
+有两种方式：
+1. 继承。FeignClient（UserClient）和 OrderController 继承同一个接口。（契约式编程）
+2. 抽取。将Feign相关的，单独抽取成一个服务
+
+此处是方式2的实现。

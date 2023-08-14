@@ -1,5 +1,6 @@
 package com.youngzy.order.pojo;
 
+import com.youngzy.feign.pojo.User;
 import lombok.Data;
 
 @Data

@@ -1,6 +1,6 @@
-package com.youngzy.order.client;
+package com.youngzy.feign.client;
 
-import com.youngzy.order.pojo.User;
+import com.youngzy.feign.pojo.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
