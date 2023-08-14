@@ -1,0 +1,18 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      server-addr: localhost:80
+    gateway:
+      routes:
+        - id: user-service #唯一标识
+          uri: lb://userservice # lb = load balanced
+          predicates:
+            - Path=/user/**
+        - id: order-service
+          uri: lb://orderservice
+          predicates:
+            - Path=/order/**
