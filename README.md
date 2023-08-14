@@ -77,3 +77,14 @@ Nacos配置管理
 2. 修改nacos配置文件：节点信息、数据库配置
 3. 启动多个nacos服务
 4. Nginx反向代理
+
+
+## v0.4.0-feign
+Feign是一个声明式的HTTP客户端，其作用就是帮助我们优雅地实现HTTP请求的发送。
+
+用来替换 RestTemplate 
+
+步骤：
+1. 引入依赖
+2. 启动类添加 @EnableFeignClients 注解
+3. 编写 FeignClient 接口
