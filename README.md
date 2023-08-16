@@ -109,3 +109,13 @@ Feign 最佳实践
 - 不同类型过滤器的执行顺序：defaultFilter - 路由内过滤器 - 全局过滤器
 
 ## v0.6.0-docker
+
+Dockerfile 构建镜像
+
+```shell
+docker build -t [镜像名]:[镜像tag] [Dockerfile所在目录]
+# 例如
+docker build -t userservice:0.1.0 .
+```
+
+docker-compose 一键部署多个微服务
