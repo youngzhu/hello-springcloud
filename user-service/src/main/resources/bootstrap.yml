@@ -5,6 +5,6 @@ spring:
     active: dev # 环境
   cloud:
     nacos:
-      server-addr: localhost:80
+      server-addr: nacos:8848
       config:
         file-extension: yaml # nacos 配置文件的后缀名

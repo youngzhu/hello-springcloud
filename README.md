@@ -119,3 +119,11 @@ docker build -t userservice:0.1.0 .
 ```
 
 docker-compose 一键部署多个微服务
+```shell
+docker-compose up -d
+
+ports: 8080:80 #将服务的80端口映射到宿主机的8080端口
+ports: [宿主机端口]:[服务端口]
+```
+
+本地没跑通。内存消耗大，本地也很难测试调试
